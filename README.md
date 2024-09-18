@@ -9,6 +9,6 @@ The solution is to add the 1752 build version of the required header file to the
 
 If you're building one of the affected xmega projects, you include "-D USE_1752" in the compiler directives, and you're good to go.
 
-In Atmel Studio, you add this compiler flag in the project preferences. In the ASF3 projects, you add it to the CCFLAGS entry in the gcc Makefile.
+In Atmel Studio, you add this compiler flag in the project preferences. In the ASF3 projects, you add it to the CCFLAGS entry in the gcc config.mk.
 
-In the attached files, io.h is the modified version from the (latest) 3.7.0.1796 toolchain, iox32e5_1752.h is iox32e5.h from the 3.6.1.1752 toolchain, and config.md is from asf-3.52.0 xmega_e5_xplained_demo/gcc.
+In the attached files, io.h is the modified version from the (latest) 3.7.0.1796 toolchain, iox32e5_1752.h is iox32e5.h from the 3.6.1.1752 toolchain, and config.mk is from asf-3.52.0 xmega_e5_xplained_demo/gcc.
