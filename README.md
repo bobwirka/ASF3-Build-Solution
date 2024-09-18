@@ -5,7 +5,7 @@ This is because many "ioxxx.h" header files changed between builds 3.6.2.1759 an
 
 I've been working with the xmega series of processors, but a diff of the avr "io" headers shows that many files are different. Quite a few differences are in the boilerplate text at the top, but the xmega file iox32e5.h, for instance, has differences that make compilation impossible.
 
-The solution is to add the 1752 build version of the required header file to the toolchain you're using and modify io.h to choose one or the other depending on a compiler "-D" flag. I copied the 1752 version of iox32e5.h as iox32e5-1752.h to the 3.7.0.1778 avr folder and modifie io.h to include an "#ifdef USE_1752" statement that included the 1752 header if defined.
+The solution is to add the 1752 build version of the required header file to the toolchain you're using and modify io.h to choose one or the other depending on a compiler "-D" flag. I copied the 1752 version of iox32e5.h as iox32e5-1752.h to the 3.7.0.1796 avr folder and modifie io.h to include an "#ifdef USE_1752" statement that included the 1752 header if defined.
 
 If you're building one of the affected xmega projects, you include "-D USE_1752" in the compiler directives, and you're good to go.
 
